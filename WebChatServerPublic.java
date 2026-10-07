@@ -1276,6 +1276,7 @@ public class WebChatServerPublic {
     } catch (Exception ignored) {
     }
 }
+}
 
     // =========================================================
     // WEBSOCKET FRAME CLASS
