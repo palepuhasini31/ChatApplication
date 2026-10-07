@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class WebChatServercopy {
+public class WebChatServerPublic {
 
     // =========================================================
     // SERVER SETTINGS
