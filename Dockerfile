@@ -1,9 +1,9 @@
- FROM eclipse-temurin:25-jdk
+FROM eclipse-temurin:25-jdk
 
 WORKDIR /app
 
 COPY . .
 
-RUN javac WebChatServer.java
+RUN javac WebChatServerPublic.java
 
-CMD ["java", "WebChatServer"]
+CMD ["java", "WebChatServerPublic"]
