@@ -291,11 +291,12 @@ public class WebChatServerPublic {
 
                     } else {
 
-                        time =
-                                LocalTime.now()
-                                        .format(
-                                                TIME_FORMAT
-                                        );
+                       time =
+        LocalTime.now(
+                ZoneId.of("Asia/Kolkata")
+        ).format(
+                TIME_FORMAT
+        );
                     }
 
 
