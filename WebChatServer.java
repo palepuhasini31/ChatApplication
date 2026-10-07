@@ -14,7 +14,9 @@ public class WebChatServer {
     // SERVER SETTINGS
     // =========================================================
 
-    private static final int PORT = 8080;
+    private static final int PORT = Integer.parseInt(
+    System.getenv().getOrDefault("PORT", "8080")
+);
 
     private static final String WEBSOCKET_GUID =
             "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
