@@ -789,11 +789,12 @@ public class WebChatServerPublic {
                     }
 
 
-                    String time =
-                            LocalTime.now()
-                                    .format(
-                                            TIME_FORMAT
-                                    );
+                   String time =
+        LocalTime.now(
+                java.time.ZoneId.of("Asia/Kolkata")
+        ).format(
+                TIME_FORMAT
+        );
 
 
                     ChatMessage chat =
