@@ -1247,57 +1247,35 @@ public class WebChatServerPublic {
 
         private void closeConnection() {
 
+    try {
 
-            try {
+        if (username != null) {
 
+            String leavingUser = username;
 
-               if (username != null) {
-    clients.remove(username);
+            clients.remove(username);
 
-    System.out.println(
-            username +
-                    " left the chat."
-    );
-}
+            System.out.println(
+                    leavingUser +
+                            " left the chat."
+            );
 
-
-                    System.out.println(
-                            leavingUser +
+            broadcast(
+                    "SYSTEM|" +
+                            encode(
+                                    leavingUser
+                            ) +
                                     " left the chat."
-                    );
+            );
 
+            broadcastUsers();
 
-                    broadcast(
-                            "SYSTEM|" +
-                                    encode(
-                                            leavingUser
-                                    ) +
-                                    " left the chat."
-                    );
-
-
-                    broadcastUsers();
-
-
-                    username = null;
-                }
-
-
-                if (
-                        socket != null
-                                &&
-                                !socket.isClosed()
-                ) {
-
-                    socket.close();
-                }
-
-
-            } catch (Exception ignored) {
-            }
+            username = null;
         }
-    }
 
+    } catch (Exception ignored) {
+    }
+}
 
     // =========================================================
     // WEBSOCKET FRAME CLASS
