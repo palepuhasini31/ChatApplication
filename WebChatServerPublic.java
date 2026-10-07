@@ -2204,12 +2204,9 @@ function joinChat() {
 
 function connectWebSocket() {
 
-    socket =
-        new WebSocket(
-            "ws://" +
-            window.location.host
-        );
-
+     socket = new WebSocket(
+    (location.protocol === "https:" ? "wss://" : "ws://") + location.host
+);
 
     socket.onopen = function() {
 
