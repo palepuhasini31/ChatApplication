@@ -1251,16 +1251,14 @@ public class WebChatServerPublic {
             try {
 
 
-                if (username != null) {
+               if (username != null) {
+    clients.remove(username);
 
-
-                    String leavingUser =
-                            username;
-
-
-                    clients.remove(
-                            username
-                    );
+    System.out.println(
+            username +
+                    " left the chat."
+    );
+}
 
 
                     System.out.println(
