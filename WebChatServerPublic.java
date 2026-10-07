@@ -290,17 +290,14 @@ public class WebChatServerPublic {
                                                 TIME_FORMAT
                                         );
 
-                    } else {
+                   } else {
 
-                       time =
-        LocalTime.now(
-               java.time.ZoneId.of("Asia/Kolkata")
-        ).format(
-                TIME_FORMAT
-        );
-                    }
-
-
+    time =
+            LocalTime.now()
+                    .format(
+                            TIME_FORMAT
+                    );
+}
                     history.add(
                             new ChatMessage(
                                     username,
